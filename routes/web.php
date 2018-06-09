@@ -10,12 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::resource('customers','ClienteController');
+Route::get('/','ClienteController@index');
+Route::post('customers.store','ClienteController@store');
+Route::get('customers.create','ClienteController@create');
+Route::DELETE('customers.destroy/{id}','ClienteController@destroy');
+Route::get('customers.edit/{id}','ClienteController@edit');
+Route::post('customers.update/{id}','ClienteController@update');
 
-Route::get('/','Abm@index');//el arroba llama al metodo del controlador abm
-Route::get('/listado','Abm@mostrarTabla');
-Route::post('/guardarCliente','Abm@guardarCliente');//sale a pegar al metodo guardar cliente
-Route::get('/','Abm@index');
-Route::get('/eliminar/{id}','Abm@eliminarPorId');
-Route::get('/modificarCliente/{id}','Abm@FormModificar');
-Route::post('/modCliente/{id}','Abm@modificarCliente');
+
 

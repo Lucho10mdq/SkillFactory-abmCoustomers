@@ -26,8 +26,8 @@
                 <td>{{$clientes->telefono}}</td>
                 <td>{{$clientes->cuil}}</td>
                 <td>{{$clientes->nroCliente}}</td>
-                <td> <a href="/eliminar/{{$clientes->id}}" class="btn btn-primary">Eliminar</td>
-                <td> <a href="/modificarCliente/{{$clientes->id}}" class="btn btn-primary">Modificar</td>
+                <td> <a href="{{ url('customers.desrtoy',$clientes->id)}}" class="btn btn-primary">Eliminar</td>
+                <td> <a href="{{ url('customers.edit',$clientes->id)}}" class="btn btn-primary">Modificar</td>
             </tr>
         @endforeach    
    

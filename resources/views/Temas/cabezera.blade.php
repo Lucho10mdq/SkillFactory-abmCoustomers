@@ -23,7 +23,7 @@
         </div>
     ...  <ul class="nav navbar-nav">
             <li><a href="/">Home</a></li>
-            <li><a href="/listado">Listado de cliente</a></li>
+            <li><a href="customers.create">Listado de cliente</a></li>
             <li><a href="#">Buscar Cliente</a></li>
             <li><a href="#">Modificar cliente</a></li>
          </ul>   
