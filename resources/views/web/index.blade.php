@@ -3,7 +3,7 @@
 @section('content')
 </br>
 </br>
-<form  method="POST" action="{{ url('customers.store')}}" class="form-horizontal">
+<form  method="POST" action="{{ action('ClienteController@store')}}" class="form-horizontal">
 {{ csrf_field() }}
     
 <fieldset>

@@ -22,10 +22,10 @@
              <a class="navbar-brand" href="#">Luis Hoyos</a>
         </div>
     ...  <ul class="nav navbar-nav">
-            <li><a href="/">Home</a></li>
-            <li><a href="customers.create">Listado de cliente</a></li>
+            <li><a href="{{ action('ClienteController@index')}}">Home</a></li>
+            <li><a href="{{ action('ClienteController@create')}}">Listado de cliente</a></li>
             <li><a href="#">Buscar Cliente</a></li>
-            <li><a href="#">Modificar cliente</a></li>
+            <li><a href="{{ action('ClienteController@store')}}">Agregar Cliente</a></li>
          </ul>   
     </nav>
     <div class="container">

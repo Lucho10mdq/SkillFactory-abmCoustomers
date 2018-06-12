@@ -4,7 +4,7 @@
 </br>
 </br>
 @if($cliente)
-<form  method="POST" action="{{ url('customers.update',$cliente->id)}}" class="form-horizontal">
+<form  method="POST" action="{{ action('customers@update',$cliente->id)}}" class="form-horizontal">
 {{ csrf_field() }}
     
 <fieldset>

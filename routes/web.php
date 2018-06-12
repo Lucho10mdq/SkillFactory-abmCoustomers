@@ -12,11 +12,7 @@
 */
 Route::resource('customers','ClienteController');
 Route::get('/','ClienteController@index');
-Route::post('customers.store','ClienteController@store');
-Route::get('customers.create','ClienteController@create');
-Route::DELETE('customers.destroy/{id}','ClienteController@destroy');
-Route::get('customers.edit/{id}','ClienteController@edit');
-Route::post('customers.update/{id}','ClienteController@update');
+Route::get('/alljson','ClienteController@jsonA');
 
 
-
+Route::get('/idjson/{id}','ClienteController@jsonPorId');

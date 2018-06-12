@@ -26,8 +26,14 @@
                 <td>{{$clientes->telefono}}</td>
                 <td>{{$clientes->cuil}}</td>
                 <td>{{$clientes->nroCliente}}</td>
-                <td> <a href="{{ url('customers.desrtoy',$clientes->id)}}" class="btn btn-primary">Eliminar</td>
-                <td> <a href="{{ url('customers.edit',$clientes->id)}}" class="btn btn-primary">Modificar</td>
+                <td> 
+                        <form  method="POST" action="{{ action('ClienteController@destroy',$clientes->id)}}" class="form-horizontal">
+                                {{ csrf_field() }}    
+                            <input type="hidden" name="_method" value="DELETE">   
+                         <button class="btn btn-primary">Eliminar</button>
+                        </form>
+                </td>
+                <td> <a href="{{ action('ClienteController@edit',$clientes->id)}}" class="btn btn-primary">Modificar</td>
             </tr>
         @endforeach    
    

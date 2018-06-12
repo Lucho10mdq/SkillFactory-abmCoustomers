@@ -102,8 +102,24 @@ class ClienteController extends Controller
      */
     public function destroy($id)
     {
+        
         $cliente=customers::find($id);
         $cliente->delete();
-        return view('web.index');
+        return redirect('/customers/create');
+    }
+
+    public function jsonA()
+    {
+        $cliente=new customers;
+        $cliente=customers::all();
+        return response()->json($cliente);
+    }
+
+    public function jsonPorId($id)
+    {
+        $cliente=customers::find($id);
+        return response()->json($cliente);
     }
 }
+
+
